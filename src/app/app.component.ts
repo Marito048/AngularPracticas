@@ -1,3 +1,4 @@
+
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,46 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'proyectoAngular';
+  nombre = 'Rodriguez Pablo';
+  edad = 40;
+  email = 'rpablo@gmail.com';
+  sueldos = [1700, 1600, 1900];
+  activo = true;
+  sitio='http://www.google.com';
+
+  esActivo() {
+    if (this.activo)
+      return 'Trabajador Activo';
+    else
+      return 'Trabajador Inactivo';
+  }
+
+  ultimos3Sueldos() {
+    let suma=0;
+    for(let x=0; x<this.sueldos.length; x++)
+      suma+=this.sueldos[x];
+    return suma;
+  }
+  //----------------------------------------------------------------
+  nombre = 'Rodriguez Pablo';
+  edad = 40;
+  sueldos = [1700, 1600, 1900];
+  //---------------------------------------------------------------
+  
+  title = 'Proyecto Angular';
+
+  contador = 1;
+
+  incrementar() {
+    this.contador++;
+  }
+
+  decrementar() {
+    this.contador--;
+  }
+  
+
 }
+
+  
+
